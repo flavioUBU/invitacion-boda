@@ -102,7 +102,7 @@ h2 {
 
 
 /* =========================================================
-   AVISO DE CONFIRMACIÓN EN PORTADA
+   AVISO DE CONFIRMACIÓN
    ========================================================= */
 
 .confirmation-deadline {
@@ -230,23 +230,15 @@ h2 {
 .intro-section,
 .event-section,
 .countdown-section,
-.gallery-section,
+.dress-code-section,
+.location-section,
 .gift-section {
-    background: white;
-}
-
-.intro-section,
-.event-section,
-.countdown-section,
-.info-section,
-.faq-section,
-.location-section {
     text-align: center;
 }
 
 
 /* =========================================================
-   INTRO
+   NUESTRO GRAN DÍA
    ========================================================= */
 
 .intro-section {
@@ -275,6 +267,106 @@ h2 {
 
 
 /* =========================================================
+   HISTORIA
+   ========================================================= */
+
+.story-section {
+    display: flex;
+    align-items: stretch;
+
+    background: #f5f1eb;
+}
+
+.story-image {
+    width: 50%;
+    min-height: 600px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content {
+    width: 50%;
+    padding: 70px;
+}
+
+.story-content h2 {
+    font-size: clamp(32px, 3.5vw, 42px);
+    line-height: 1.25;
+    margin-bottom: 28px;
+}
+
+.story-content p:not(.section-label) {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   FRASE
+   ========================================================= */
+
+.quote-section {
+    width: 100%;
+
+    padding: 95px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.quote-content {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+/* Frase principal */
+.quote-content p:first-child {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+/* Frase secundaria */
+.quote-content p:nth-child(2) {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 1.7;
+
+    letter-spacing: 0.3px;
+
+    margin-bottom: 0;
+}
+
+/* Frase final */
+.quote-content .quote-final {
+    font-family: 'Playfair Display', serif;
+
+    margin-top: 28px;
+    margin-bottom: 0;
+
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 1.4;
+}
+
+
+/* =========================================================
    EVENTO
    ========================================================= */
 
@@ -286,6 +378,8 @@ h2 {
 
     align-items: center;
     justify-content: center;
+
+    background: #ffffff;
 }
 
 .event-section h2 {
@@ -348,46 +442,6 @@ h2 {
 
 
 /* =========================================================
-   HISTORIA
-   ========================================================= */
-
-.story-section {
-    display: flex;
-    align-items: stretch;
-    background: #f5f1eb;
-}
-
-.story-image {
-    width: 50%;
-    min-height: 600px;
-}
-
-.story-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.story-content {
-    width: 50%;
-    padding: 70px;
-}
-
-.story-content h2 {
-    font-size: clamp(32px, 3.5vw, 42px);
-    line-height: 1.25;
-    margin-bottom: 28px;
-}
-
-.story-content p:not(.section-label) {
-    font-size: 17px;
-    line-height: 1.8;
-    max-width: 500px;
-    margin-bottom: 20px;
-}
-
-
-/* =========================================================
    CUENTA ATRÁS
    ========================================================= */
 
@@ -399,6 +453,8 @@ h2 {
 
     justify-content: center;
     align-items: center;
+
+    background: #f5f1eb;
 }
 
 .countdown-section h2 {
@@ -428,6 +484,54 @@ h2 {
 .countdown-item p {
     font-size: 12px;
     letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   DRESS CODE
+   ========================================================= */
+
+.dress-code-section {
+    width: 100%;
+
+    padding: 95px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.dress-code-section h2 {
+    width: 100%;
+
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.2;
+
+    margin-bottom: 35px;
+}
+
+.dress-code-content {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.dress-code-content p {
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.dress-code-content p:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -496,146 +600,6 @@ h2 {
 
 
 /* =========================================================
-   INFORMACIÓN
-   ========================================================= */
-
-.info-section {
-    padding: 95px 30px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    background: #f5f1eb;
-}
-
-.info-section h2 {
-    font-size: clamp(34px, 4vw, 46px);
-    margin-bottom: 50px;
-}
-
-.info-cards {
-    width: 100%;
-    max-width: 1000px;
-
-    display: flex;
-    gap: 25px;
-}
-
-.info-card {
-    flex: 1;
-    padding: 35px 28px;
-    background: white;
-}
-
-.info-card h3 {
-    font-size: 13px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.info-card p {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 22px;
-}
-
-.info-card a {
-    color: #3f3a35;
-
-    text-decoration: none;
-
-    font-size: 12px;
-    letter-spacing: 2px;
-
-    border-bottom: 1px solid #3f3a35;
-
-    padding-bottom: 5px;
-}
-
-
-/* =========================================================
-   FAQ
-   ========================================================= */
-
-.faq-section {
-    padding: 95px 30px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    background: #f5f1eb;
-}
-
-.faq-section h2 {
-    font-size: clamp(34px, 4vw, 46px);
-    margin-bottom: 50px;
-}
-
-.faq {
-    width: 100%;
-    max-width: 800px;
-}
-
-.faq-item {
-    border-top: 1px solid #c9c2b9;
-}
-
-.faq-item:last-child {
-    border-bottom: 1px solid #c9c2b9;
-}
-
-.faq-question {
-    width: 100%;
-
-    padding: 23px 10px;
-
-    display: flex;
-    justify-content: space-between;
-
-    border: none;
-    background: none;
-
-    color: #3f3a35;
-
-    font-family: inherit;
-    font-size: 16px;
-
-    cursor: pointer;
-    text-align: left;
-}
-
-.faq-question span {
-    font-size: 23px;
-    transition: transform 0.3s ease;
-}
-
-.faq-answer {
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition: max-height 0.4s ease;
-}
-
-.faq-answer p {
-    padding: 0 10px 23px;
-
-    font-size: 16px;
-    line-height: 1.75;
-
-    text-align: left;
-}
-
-.faq-item.active .faq-question span {
-    transform: rotate(45deg);
-}
-
-
-/* =========================================================
    REGALO
    ========================================================= */
 
@@ -648,6 +612,8 @@ h2 {
     align-items: center;
 
     text-align: center;
+
+    background: #ffffff;
 }
 
 .gift-section h2 {
@@ -701,6 +667,7 @@ h2 {
     font-family: inherit;
 
     font-size: 12px;
+
     letter-spacing: 2px;
 
     cursor: pointer;
@@ -816,11 +783,6 @@ h2 {
     visibility: visible;
 }
 
-
-/* =========================================================
-   CONTENIDO DEL FORMULARIO
-   ========================================================= */
-
 .rsvp-modal-content {
     width: min(100%, 620px);
     max-height: 90vh;
@@ -846,7 +808,7 @@ h2 {
 
 
 /* =========================================================
-   CABECERA
+   CABECERA FORMULARIO
    ========================================================= */
 
 .rsvp-header {
@@ -875,7 +837,7 @@ h2 {
 
 
 /* =========================================================
-   FECHA LÍMITE DEL FORMULARIO
+   FECHA LÍMITE
    ========================================================= */
 
 .rsvp-deadline {
@@ -1196,10 +1158,6 @@ h2 {
     .story-content {
         padding: 50px;
     }
-
-    .info-cards {
-        gap: 15px;
-    }
 }
 
 
@@ -1383,7 +1341,67 @@ h2 {
     }
 
 
-    /* INTRO */
+    /* HISTORIA */
+
+    .story-section {
+        flex-direction: column;
+    }
+
+    .story-image {
+        width: 100%;
+
+        height: 330px;
+
+        min-height: 0;
+    }
+
+    .story-content {
+        width: 100%;
+        padding: 55px 25px;
+    }
+
+    .story-content h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 22px;
+    }
+
+    .story-content p:not(.section-label) {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 17px;
+    }
+
+
+    /* FRASE */
+
+    .quote-section {
+        padding: 65px 25px;
+    }
+
+    .quote-content {
+        max-width: 100%;
+    }
+
+    .quote-content p:first-child {
+        font-size: 25px;
+        line-height: 1.45;
+        margin-bottom: 14px;
+    }
+
+    .quote-content p:nth-child(2) {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .quote-content .quote-final {
+        margin-top: 24px;
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+
+    /* NUESTRO GRAN DÍA */
 
     .intro-section {
         padding: 65px 25px;
@@ -1440,42 +1458,12 @@ h2 {
     }
 
 
-    /* HISTORIA */
-
-    .story-section {
-        flex-direction: column;
-    }
-
-    .story-image {
-        width: 100%;
-
-        height: 330px;
-
-        min-height: 0;
-    }
-
-    .story-content {
-        width: 100%;
-        padding: 55px 25px;
-    }
-
-    .story-content h2 {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 22px;
-    }
-
-    .story-content p:not(.section-label) {
-        font-size: 15px;
-        line-height: 1.7;
-        margin-bottom: 17px;
-    }
-
-
     /* CUENTA ATRÁS */
 
     .countdown-section {
         padding: 65px 20px;
+
+        background: #f5f1eb;
     }
 
     .countdown-section h2 {
@@ -1508,121 +1496,54 @@ h2 {
     }
 
 
+    /* DRESS CODE */
+
+    .dress-code-section {
+        padding: 65px 25px;
+
+        background: #ffffff;
+    }
+
+    .dress-code-section h2 {
+        font-size: 31px;
+        line-height: 1.2;
+        margin-bottom: 28px;
+    }
+
+    .dress-code-content {
+        max-width: 100%;
+    }
+
+    .dress-code-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 17px;
+    }
+
+
     /* UBICACIÓN */
 
     .location-section {
-        width: 100%;
-
         padding: 65px 25px;
 
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
+        background: #f5f1eb;
     }
 
     .location-section h2 {
-        width: 100%;
-
         font-size: 31px;
         line-height: 1.2;
-
         margin-bottom: 28px;
     }
 
     .location-details {
-        width: 100%;
         max-width: 100%;
 
         margin: 0 auto 30px;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
     }
 
     .location-details p {
-        width: 100%;
-
         font-size: 15px;
         line-height: 1.7;
-
-        text-align: center;
-    }
-
-    .location-section .map-button {
-        margin: 0 auto;
-    }
-
-
-    /* INFORMACIÓN */
-
-    .info-section {
-        padding: 65px 20px;
-    }
-
-    .info-section h2 {
-        font-size: 31px;
-        line-height: 1.2;
-        margin-bottom: 35px;
-    }
-
-    .info-cards {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .info-card {
-        padding: 25px 22px;
-    }
-
-    .info-card h3 {
-        font-size: 12px;
-        letter-spacing: 2px;
-        margin-bottom: 13px;
-    }
-
-    .info-card p {
-        font-size: 14px;
-        line-height: 1.65;
-        margin-bottom: 17px;
-    }
-
-    .info-card a {
-        font-size: 10px;
-    }
-
-
-    /* FAQ */
-
-    .faq-section {
-        padding: 65px 20px;
-    }
-
-    .faq-section h2 {
-        font-size: 31px;
-        margin-bottom: 35px;
-    }
-
-    .faq-question {
-        padding: 18px 5px;
-        font-size: 14px;
-    }
-
-    .faq-question span {
-        font-size: 21px;
-    }
-
-    .faq-answer p {
-        padding: 0 5px 20px;
-        font-size: 14px;
-        line-height: 1.65;
     }
 
 
@@ -1630,6 +1551,8 @@ h2 {
 
     .gift-section {
         padding: 65px 25px 90px;
+
+        background: #ffffff;
     }
 
     .gift-section h2 {
@@ -1756,8 +1679,7 @@ h2 {
     }
 
     .intro-section h2,
-    .info-section h2,
-    .faq-section h2 {
+    .dress-code-section h2 {
         font-size: 28px;
     }
 
@@ -1782,6 +1704,21 @@ h2 {
     .floating-rsvp {
         width: calc(100% - 30px);
         bottom: 10px;
+    }
+
+
+    /* FRASE */
+
+    .quote-content p:first-child {
+        font-size: 23px;
+    }
+
+    .quote-content p:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .quote-content .quote-final {
+        font-size: 27px;
     }
 
 

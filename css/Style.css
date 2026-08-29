@@ -1,0 +1,1813 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;500&display=swap');
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e9e5df;
+    background-image: url('../images/fondo6.jpg');
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #3f3a35;
+}
+
+.page {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
+    position: relative;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PORTADA
+   ========================================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: min(82vh, 850px);
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.intro {
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 70px);
+    line-height: 1.08;
+}
+
+.date {
+    margin-top: 30px;
+    font-size: 19px;
+    letter-spacing: 5px;
+}
+
+.location {
+    margin-top: 12px;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.confirmation-deadline {
+    margin-top: 28px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    background: rgba(0, 0, 0, 0.18);
+
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+
+    text-align: center;
+
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.main-menu {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 70px;
+    padding: 15px 25px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #eee9e3;
+
+    z-index: 1000;
+}
+
+.main-menu.fixed {
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(100%, 1200px);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.main-menu a {
+    color: #3f3a35;
+    text-decoration: none;
+
+    font-size: 16px;
+    letter-spacing: 1.5px;
+
+    transition: opacity 0.2s ease;
+}
+
+.main-menu a:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    width: 36px;
+    height: 30px;
+
+    padding: 4px;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 1.5px;
+
+    background: #3f3a35;
+
+    margin: 5px 0;
+
+    transition: 0.3s ease;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+.section-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.intro-section,
+.event-section,
+.countdown-section,
+.dress-code-section,
+.location-section,
+.gift-section {
+    text-align: center;
+}
+
+
+/* =========================================================
+   EL GRAN DÍA - FECHA
+   FONDO BLANCO
+   ========================================================= */
+
+.event-section {
+    padding: 95px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+.event-section h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    letter-spacing: 2px;
+
+    margin-bottom: 55px;
+}
+
+.event-details {
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 50px;
+}
+
+.event-item {
+    flex: 1;
+}
+
+.event-item h3 {
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    margin-bottom: 16px;
+}
+
+.event-item p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.event-item .event-time {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.map-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid #3f3a35;
+
+    color: #3f3a35;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    transition: opacity 0.2s ease;
+}
+
+.map-button:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   HISTORIA
+   FONDO BEIGE
+   ========================================================= */
+
+.story-section {
+    display: flex;
+    align-items: stretch;
+
+    background: #f5f1eb;
+}
+
+.story-image {
+    width: 50%;
+    min-height: 600px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.story-content {
+    width: 50%;
+
+    padding: 70px;
+}
+
+.story-content h2 {
+    font-size: clamp(32px, 3.5vw, 42px);
+
+    line-height: 1.25;
+
+    margin-bottom: 28px;
+}
+
+.story-content p:not(.section-label) {
+    font-size: 17px;
+    line-height: 1.8;
+
+    max-width: 500px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   BLOQUE COMBINADO
+   FRASE + INVITACIÓN
+   FONDO BLANCO
+   ========================================================= */
+
+.combined-section {
+    width: 100%;
+
+    padding: 95px 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.combined-content {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================================
+   FRASE PRINCIPAL
+   ========================================================= */
+
+.combined-phrase {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(25px, 3vw, 36px);
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   FRASE SECUNDARIA
+   ========================================================= */
+
+.combined-subphrase {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
+    font-size: clamp(18px, 2vw, 24px);
+
+    line-height: 1.7;
+
+    letter-spacing: 0.3px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   FRASE "ESTAMOS DESEANDO"
+   ========================================================= */
+
+.combined-sharing {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(25px, 3vw, 36px);
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   "NOS CASAMOS"
+   ========================================================= */
+
+.combined-final {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(25px, 3vw, 36px);
+
+    line-height: 1.4;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   PEQUEÑO SEPARADOR VISUAL
+   ========================================================= */
+
+.combined-subphrase::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    background: #cfc8bf;
+
+    margin: 35px auto 0;
+}
+
+
+/* =========================================================
+   CUENTA ATRÁS
+   FONDO BEIGE
+   ========================================================= */
+
+.countdown-section {
+    padding: 90px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #f5f1eb;
+}
+
+.countdown-section h2 {
+    font-size: clamp(32px, 4vw, 44px);
+
+    margin-bottom: 45px;
+}
+
+.countdown {
+    display: flex;
+
+    gap: clamp(25px, 5vw, 60px);
+}
+
+.countdown-item {
+    min-width: 70px;
+}
+
+.countdown-item span {
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(35px, 4vw, 50px);
+
+    margin-bottom: 8px;
+}
+
+.countdown-item p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   DRESS CODE
+   FONDO BLANCO
+   ========================================================= */
+
+.dress-code-section {
+    width: 100%;
+
+    padding: 95px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.dress-code-section h2 {
+    width: 100%;
+
+    font-size: clamp(34px, 4vw, 46px);
+
+    line-height: 1.2;
+
+    margin-bottom: 35px;
+}
+
+.dress-code-content {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.dress-code-content p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.dress-code-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   UBICACIÓN
+   FONDO BEIGE
+   ========================================================= */
+
+.location-section {
+    width: 100%;
+
+    padding: 95px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f1eb;
+
+    text-align: center;
+}
+
+.location-section .section-label {
+    width: 100%;
+
+    margin-bottom: 22px;
+}
+
+.location-section h2 {
+    width: 100%;
+
+    font-size: clamp(34px, 4vw, 46px);
+
+    line-height: 1.2;
+
+    margin-bottom: 35px;
+}
+
+.location-details {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.location-details p {
+    width: 100%;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+.location-section .map-button {
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   REGALO
+   FONDO BLANCO
+   ========================================================= */
+
+.gift-section {
+    padding: 90px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.gift-section h2 {
+    font-size: clamp(32px, 4vw, 42px);
+
+    margin-bottom: 25px;
+}
+
+.gift-section > p:not(.section-label):not(.copy-message) {
+    max-width: 600px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.bank-data {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+.bank-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+#iban {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+}
+
+.bank-holders {
+    font-size: 15px;
+}
+
+.copy-button {
+    padding: 12px 24px;
+
+    border: 1px solid #3f3a35;
+
+    background: transparent;
+
+    color: #3f3a35;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.copy-message {
+    margin-top: 12px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 45px 20px;
+
+    background: #3f3a35;
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer p {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.footer span {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   BOTÓN CONFIRMAR
+   ========================================================= */
+
+.floating-rsvp {
+    position: fixed;
+
+    z-index: 1100;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(360px, calc(100% - 40px));
+
+    padding: 15px 20px;
+
+    background: #3f3a35;
+
+    color: white;
+
+    border: none;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.floating-rsvp:hover {
+    transform: translateX(-50%) translateY(-2px);
+}
+
+
+/* =========================================================
+   FORMULARIO DE CONFIRMACIÓN
+   ========================================================= */
+
+.rsvp-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(40, 36, 32, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+}
+
+.rsvp-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rsvp-modal-content {
+    width: min(100%, 620px);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    position: relative;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(15px);
+
+    transition: transform 0.25s ease;
+}
+
+.rsvp-modal.active .rsvp-modal-content {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CABECERA FORMULARIO
+   ========================================================= */
+
+.rsvp-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.rsvp-header .section-label {
+    margin-bottom: 12px;
+}
+
+.rsvp-header h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 34px;
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+.rsvp-header p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #6b655f;
+}
+
+
+/* =========================================================
+   FECHA LÍMITE
+   ========================================================= */
+
+.rsvp-deadline {
+    margin-top: 18px;
+
+    padding: 12px 15px;
+
+    background: #f5f1eb;
+
+    color: #3f3a35 !important;
+
+    font-size: 14px !important;
+
+    line-height: 1.5 !important;
+}
+
+.rsvp-deadline strong {
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   CERRAR
+   ========================================================= */
+
+.rsvp-close {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #3f3a35;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   INVITADOS
+   ========================================================= */
+
+.guest-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.guest-card {
+    padding: 20px;
+
+    background: #f5f1eb;
+
+    border: 1px solid #e6dfd6;
+}
+
+.guest-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.guest-number {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+}
+
+.remove-guest {
+    border: none;
+
+    background: transparent;
+
+    color: #8a8178;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.remove-guest:hover {
+    color: #3f3a35;
+}
+
+
+/* =========================================================
+   NOMBRE INVITADO
+   ========================================================= */
+
+.guest-name {
+    width: 100%;
+
+    padding: 13px 12px;
+
+    border: 1px solid #d5cec5;
+
+    background: white;
+
+    color: #3f3a35;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.guest-name:focus {
+    border-color: #3f3a35;
+}
+
+.guest-name::placeholder {
+    color: #aaa39b;
+}
+
+
+/* =========================================================
+   MENÚS
+   ========================================================= */
+
+.menu-title {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 12px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #6b655f;
+}
+
+.menu-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+}
+
+.menu-option {
+    position: relative;
+}
+
+.menu-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.menu-option label {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 45px;
+
+    padding: 8px;
+
+    border: 1px solid #d5cec5;
+
+    background: white;
+
+    color: #3f3a35;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+            background 0.2s ease,
+            color 0.2s ease,
+            border 0.2s ease;
+}
+
+.menu-option input:checked + label {
+    background: #3f3a35;
+
+    border-color: #3f3a35;
+
+    color: white;
+}
+
+
+/* =========================================================
+   AÑADIR INVITADO
+   ========================================================= */
+
+.add-guest {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px dashed #bdb5ac;
+
+    background: transparent;
+
+    color: #3f3a35;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+}
+
+.add-guest:hover {
+    background: #f5f1eb;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.rsvp-error {
+    display: none;
+
+    margin-bottom: 18px;
+
+    padding: 12px 15px;
+
+    background: #f5e8e5;
+
+    color: #7c443c;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.rsvp-error.active {
+    display: block;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.rsvp-submit {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    background: #3f3a35;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+.rsvp-submit:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .main-menu {
+        min-height: 62px;
+    }
+
+    .menu-links {
+        gap: 18px;
+    }
+
+    .main-menu a {
+        font-size: 14px;
+    }
+
+    .story-content {
+        padding: 50px;
+    }
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        background-color: #e9e5df;
+
+        background-image: url('../images/fondo6.jpg');
+
+        background-size: auto 100%;
+        background-position: center top;
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .page {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       PORTADA
+       ===================================================== */
+
+    .hero {
+        height: 72svh;
+
+        min-height: 500px;
+        max-height: 700px;
+    }
+
+    .hero-overlay {
+        padding: 20px;
+    }
+
+    .intro {
+        font-size: 13px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 54px);
+
+        line-height: 1.05;
+    }
+
+    .date {
+        margin-top: 22px;
+
+        font-size: 16px;
+
+        letter-spacing: 3px;
+    }
+
+    .location {
+        margin-top: 10px;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .confirmation-deadline {
+        margin-top: 22px;
+
+        padding: 9px 13px;
+
+        max-width: 300px;
+
+        font-size: 11px;
+
+        letter-spacing: 1px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       MENÚ
+       ===================================================== */
+
+    .main-menu,
+    .main-menu.fixed {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        min-height: 52px;
+        height: 52px;
+
+        padding: 8px 14px;
+
+        justify-content: flex-end;
+
+        transform: none;
+
+        background: rgba(255, 255, 255, 0.88);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+        z-index: 1200;
+
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .menu-toggle {
+        display: block;
+
+        width: 32px;
+        height: 28px;
+
+        padding: 3px;
+
+        margin: 0;
+    }
+
+    .menu-toggle span {
+        width: 100%;
+
+        height: 1.5px;
+
+        background: #3f3a35;
+
+        margin: 5px 0;
+    }
+
+    .menu-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+
+        top: 52px;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 1190;
+
+        display: flex;
+        flex-direction: column;
+
+        background: rgba(255, 255, 255, 0.98);
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        transition: max-height 0.35s ease;
+    }
+
+    .mobile-menu.active {
+        max-height: 500px;
+    }
+
+    .mobile-menu a {
+        padding: 15px 25px;
+
+        border-bottom: 1px solid #eee9e3;
+
+        color: #3f3a35;
+
+        text-decoration: none;
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* =====================================================
+       HISTORIA
+       ===================================================== */
+
+    .story-section {
+        flex-direction: column;
+    }
+
+    .story-image {
+        width: 100%;
+
+        height: 330px;
+
+        min-height: 0;
+    }
+
+    .story-content {
+        width: 100%;
+
+        padding: 55px 25px;
+    }
+
+    .story-content h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        margin-bottom: 22px;
+    }
+
+    .story-content p:not(.section-label) {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 17px;
+    }
+
+
+    /* =====================================================
+       BLOQUE COMBINADO
+       ===================================================== */
+
+    .combined-section {
+        padding: 65px 25px;
+    }
+
+    .combined-content {
+        max-width: 100%;
+    }
+
+    .combined-phrase {
+        font-size: 23px;
+
+        line-height: 1.45;
+
+        margin-bottom: 14px;
+    }
+
+    .combined-subphrase {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 0;
+    }
+
+    .combined-subphrase::after {
+        width: 40px;
+
+        margin: 28px auto 0;
+    }
+
+    .combined-sharing {
+        font-size: 23px;
+
+        line-height: 1.45;
+
+        margin-top: 28px;
+
+        margin-bottom: 14px;
+    }
+
+    .combined-final {
+        font-size: 23px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =====================================================
+       CUENTA ATRÁS
+       ===================================================== */
+
+    .countdown-section {
+        padding: 65px 20px;
+    }
+
+    .countdown-section h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        margin-bottom: 35px;
+    }
+
+    .countdown {
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 5px;
+    }
+
+    .countdown-item {
+        min-width: 0;
+
+        flex: 1;
+    }
+
+    .countdown-item span {
+        font-size: 34px;
+
+        margin-bottom: 5px;
+    }
+
+    .countdown-item p {
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =====================================================
+       DRESS CODE
+       ===================================================== */
+
+    .dress-code-section {
+        padding: 65px 25px;
+    }
+
+    .dress-code-section h2 {
+        font-size: 31px;
+
+        line-height: 1.2;
+
+        margin-bottom: 28px;
+    }
+
+    .dress-code-content {
+        max-width: 100%;
+    }
+
+    .dress-code-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 17px;
+    }
+
+
+    /* =====================================================
+       UBICACIÓN
+       ===================================================== */
+
+    .location-section {
+        padding: 65px 25px;
+    }
+
+    .location-section h2 {
+        font-size: 31px;
+
+        line-height: 1.2;
+
+        margin-bottom: 28px;
+    }
+
+    .location-details {
+        max-width: 100%;
+
+        margin: 0 auto 30px;
+    }
+
+    .location-details p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       REGALO
+       ===================================================== */
+
+    .gift-section {
+        padding: 65px 25px 90px;
+    }
+
+    .gift-section h2 {
+        font-size: 29px;
+
+        line-height: 1.2;
+
+        margin-bottom: 20px;
+    }
+
+    .gift-section > p:not(.section-label):not(.copy-message) {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+    #iban {
+        font-size: 14px;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+    }
+
+    .bank-holders {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer {
+        padding: 35px 20px 85px;
+    }
+
+    .footer p {
+        font-size: 22px;
+    }
+
+
+    /* =====================================================
+       BOTÓN
+       ===================================================== */
+
+    .floating-rsvp {
+        bottom: 15px;
+
+        width: calc(100% - 40px);
+
+        max-width: 360px;
+
+        padding: 14px 18px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =====================================================
+       FORMULARIO
+       ===================================================== */
+
+    .rsvp-modal {
+        padding: 0;
+
+        align-items: flex-end;
+    }
+
+    .rsvp-modal-content {
+        width: 100%;
+
+        max-height: 94svh;
+
+        padding: 30px 20px 25px;
+
+        border-radius: 14px 14px 0 0;
+    }
+
+    .rsvp-header {
+        padding: 0 25px;
+
+        margin-bottom: 25px;
+    }
+
+    .rsvp-header h2 {
+        font-size: 29px;
+    }
+
+    .rsvp-header p {
+        font-size: 14px;
+    }
+
+    .rsvp-deadline {
+        margin-top: 15px;
+
+        padding: 10px 12px;
+
+        font-size: 13px !important;
+    }
+
+    .rsvp-close {
+        top: 10px;
+
+        right: 12px;
+    }
+
+    .guest-card {
+        padding: 16px;
+    }
+
+    .menu-options {
+        gap: 7px;
+    }
+
+    .menu-option label {
+        font-size: 12px;
+
+        min-height: 43px;
+    }
+
+    .rsvp-submit {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================================
+   MÓVILES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        min-height: 460px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .intro-section h2,
+    .dress-code-section h2 {
+        font-size: 28px;
+    }
+
+    .countdown-item span {
+        font-size: 30px;
+    }
+
+    .countdown-item p {
+        font-size: 8px;
+    }
+
+    .confirmation-deadline {
+        max-width: 270px;
+
+        margin-top: 18px;
+
+        padding: 8px 10px;
+
+        font-size: 10px;
+    }
+
+    .floating-rsvp {
+        width: calc(100% - 30px);
+
+        bottom: 10px;
+    }
+
+
+    /* =====================================================
+       BLOQUE COMBINADO
+       ===================================================== */
+
+    .combined-phrase {
+        font-size: 22px;
+    }
+
+    .combined-subphrase {
+        font-size: 14px;
+    }
+
+    .combined-sharing {
+        font-size: 22px;
+    }
+
+    .combined-final {
+        font-size: 22px;
+    }
+
+
+    /* =====================================================
+       FORMULARIO
+       ===================================================== */
+
+    .rsvp-modal-content {
+        padding: 27px 15px 20px;
+    }
+
+    .rsvp-header h2 {
+        font-size: 27px;
+    }
+
+    .guest-card {
+        padding: 14px;
+    }
+
+    .menu-option label {
+        font-size: 11px;
+    }
+}
